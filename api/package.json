@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node init && ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "ts-node-dev --respawn --transpile-only src/server.ts",
     "compile": "node ./dist/server.js",
     "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
-    "build": "node init && tsc && copyfiles -u 1 template/* dist/template",
+    "build": "tsc && copyfiles -u 1 template/* dist/template",
     "lint:fix": "eslint . --fix",
     "postinstall": "prisma generate",
     "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
